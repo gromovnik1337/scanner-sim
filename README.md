@@ -146,8 +146,8 @@ SAVEC_CUSTOM_PATHS = {
 ```
 
 ### Sources
-https://ubuntuhandbook.org/index.php/2020/07/install-qt4-ubuntu-20-04/#google_vignette
-https://stackoverflow.com/questions/62737525/how-to-fix-error-1-was-not-declared-in-this-scope
-https://github.com/jamesbowman/openexrpython/issues/28
-https://github.com/matplotlib/matplotlib/issues/26827 
-https://man7.org/linux/man-pages/man8/ldconfig.8.html
+- https://ubuntuhandbook.org/index.php/2020/07/install-qt4-ubuntu-20-04/#google_vignette
+- https://stackoverflow.com/questions/62737525/how-to-fix-error-1-was-not-declared-in-this-scope
+- https://github.com/jamesbowman/openexrpython/issues/28
+- https://github.com/matplotlib/matplotlib/issues/26827 
+- https://man7.org/linux/man-pages/man8/ldconfig.8.html
