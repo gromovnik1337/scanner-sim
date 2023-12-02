@@ -122,7 +122,7 @@ pip install cffi
 ```
 
 If errors were present & sorted, do pip install -e . again (for good measure).
-If no other dependancies are required, with this step, one can proceed to reproduce validation experiments in `simulator/validation`.
+If no other dependancies are required, with this step, one can proceed to Testing.
 
 ### Lucid Arena Dependancy
 Download Arena SDK (Python) from: https://thinklucid.com/downloads-hub/
@@ -151,3 +151,9 @@ SAVEC_CUSTOM_PATHS = {
 - https://github.com/jamesbowman/openexrpython/issues/28
 - https://github.com/matplotlib/matplotlib/issues/26827 
 - https://man7.org/linux/man-pages/man8/ldconfig.8.html
+
+## Testing
+Download accuracy_test.zip from https://archive.nyu.edu/handle/2451/63307 & unpack it locally. Inside *charuco_plane* folder, create a combined folder. Inside of it, copy *gray/img_01.exr* as *blank_0.exr*, *gray/img_00.exr* as *white_0.exr*, and *color/checker.exr* as *checker_0.exr*. 
+See: https://github.com/geometryprocessing/scanner-sim/blob/master/simulator/validation/accuracy_test.py#L37
+
+Reproduce validation experiments in `simulator/validation`.
