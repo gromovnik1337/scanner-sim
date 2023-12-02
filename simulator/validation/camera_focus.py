@@ -94,7 +94,7 @@ if __name__ == "__main__":
     data_path = mitsuba_path + "/scenes"
     ensure_exists(data_path)
 
-    # simulate_camera_focus(data_path + "/camera_focus", mitsuba_path)
+    simulate_camera_focus(data_path + "/camera_focus", mitsuba_path)
 
     analyze_camera_focus(data_path + "/camera_focus", reference=calib_path + "camera_focus.json")
     plt.show()

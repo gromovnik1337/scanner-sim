@@ -40,7 +40,7 @@ def simulate_projector_focus(data_path, mitsuba_path, range_cm=(61, 94), scale=0
     # pattern[h-10, :, :] = 255
     # pattern[h-8, :, :] = 255
     pattern[h-1, w//2, :] = 255
-    imageio.imwrite(data_path + "/pattern.png", pattern)
+    cv2.imwrite(data_path + "/pattern.png", pattern[:, :, ::-1])
     config["pro_offset_x"], config["pro_offset_y"] = w/2, h
 
     config["scale"] = scale
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     data_path = mitsuba_path + "/scenes"
     ensure_exists(data_path)
 
-    # simulate_projector_focus(data_path + "/projector_focus", mitsuba_path, ideal_camera=False, cam_samples=1024)
+    simulate_projector_focus(data_path + "/projector_focus", mitsuba_path, ideal_camera=False, cam_samples=1024)
 
     analyze_projector_focus(data_path + "/projector_focus", reference=calib_path + "projector_focus.json")
 
