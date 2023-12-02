@@ -270,14 +270,15 @@ if __name__ == "__main__":
     cam_calib = load_calibration(calib_path + "camera_geometry.json")
     proj_calib = load_calibration(calib_path + "projector_geometry.json")
 
-    captured_path = "/home/vida/data/scanner-sim/accuracy_test/charuco_plane/combined/"
+    captured_path = "/media/vice/Vice_SSD/01. Projects/01. THEIA/Tools/scanner_sim_calibration_files/accuracy_test/charuco_plane/combined/"
     process_accuracy_test(captured_path, cam_calib, reuse_corners=False)
 
     copy_to(valid_path, captured_path + "board_geometry.json")
     board_geometry = load_calibration(valid_path + "board_geometry.json")
 
     mitsuba_path = "/media/vice-oqton/Vice_SSD/01. Projects/01. THEIA/Tools/scanner-sim/mitsuba"
-    rendered_path = mitsuba_path + "scenes/accuracy_test/"
+    # rendered_path = mitsuba_path + "scenes/accuracy_test/"
+    rendered_path = "/home/vice/scenes/accuracy_test/"
     ensure_exists(rendered_path)
 
     simulate_accuracy_test(rendered_path, mitsuba_path, board_geometry, reuse_patterns=False, cam_samples=128)

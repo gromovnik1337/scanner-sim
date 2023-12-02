@@ -91,7 +91,8 @@ def analyze_camera_focus(data_path, reference=None, print_version=True):
 
 if __name__ == "__main__":
     mitsuba_path = "/media/vice-oqton/Vice_SSD/01. Projects/01. THEIA/Tools/scanner-sim/mitsuba"
-    data_path = mitsuba_path + "/scenes"
+    # data_path = mitsuba_path + "/scenes"
+    data_path = "/home/vice/scenes/accuracy_test/"
     ensure_exists(data_path)
 
     simulate_camera_focus(data_path + "/camera_focus", mitsuba_path)

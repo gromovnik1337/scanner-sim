@@ -136,7 +136,8 @@ def analyze_projector_focus(data_path, reference=None, dist_offset_mm=320, cam_r
 
 if __name__ == "__main__":
     mitsuba_path = "/media/vice-oqton/Vice_SSD/01. Projects/01. THEIA/Tools/scanner-sim/mitsuba"
-    data_path = mitsuba_path + "/scenes"
+    # data_path = mitsuba_path + "/scenes"
+    data_path = "/home/vice/scenes/accuracy_test/"
     ensure_exists(data_path)
 
     simulate_projector_focus(data_path + "/projector_focus", mitsuba_path, ideal_camera=False, cam_samples=1024)
